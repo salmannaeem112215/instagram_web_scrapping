@@ -22,3 +22,8 @@ if %errorlevel% neq 0 (
 )
 
 echo Execution completed successfully
+
+
+REM Delete instagram.html and output.html
+del /q instagram.html
+del /q output.html
