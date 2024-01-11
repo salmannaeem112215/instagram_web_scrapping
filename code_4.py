@@ -2,8 +2,8 @@ from selenium import webdriver
 import time
 
 driver = webdriver.Chrome()  # Replace with your preferred browser driver
-# url = "https://www.instagram.com/explore/topics/164724284439267/gothic-fashion/"
-url = "https://www.instagram.com/explore/"
+url = "https://www.instagram.com/explore/topics/164724284439267/gothic-fashion/"
+# url = "https://www.instagram.com/explore/"
 driver.get(url)
 
 # Allow some time for initial loading (adjust as needed)
