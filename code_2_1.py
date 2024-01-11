@@ -1,4 +1,4 @@
-def extract_links(file_path, link_prefix="href=\"https://www.instagram.com/p/"):
+def extract_links(file_path, link_prefix="href=\"/p/"):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             file_content = file.read()
@@ -10,7 +10,7 @@ def extract_links(file_path, link_prefix="href=\"https://www.instagram.com/p/"):
                 end_index = file_content.find("\"", index + len(link_prefix))
                 if end_index != -1:
                     link = file_content[index: end_index]
-                    links.append(link[6:])
+                    links.append("https://instagram.com" + link[6:])  # Replace and append with new prefix
                     index = file_content.find(link_prefix, end_index)
                 else:
                     break
